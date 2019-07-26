@@ -7,4 +7,84 @@ name should imply what the thing is.
 method names should be verbs
 
 
-Practice Problems
+Practice Problems on "Practice-It": 1:40 -
+
+14.1: splitStack
+
+public void splitStack(Stack<Integer> s){
+    int size = s.size();
+    Queue<Integer> q = new LinkedList<Integer>();
+    
+    while (!s.isEmpty()){
+        q.add(s.pop());
+    }
+    
+    for (int i = 0; i < size; i++){
+        if (q.peek() < 0){
+            s.push(q.remove());
+        } else {
+            q.add(q.remove());
+        }
+    }
+    
+    while (!q.isEmpty()){
+        s.push(q.remove());
+    }
+}
+
+14.2: stutter
+
+public void stutter(Stack<Integer> s){
+
+        Queue<Integer> q = new LinkedList<Integer>();
+    
+    while (!s.isEmpty()){
+        int num = s.pop();
+        q.add(num);
+        q.add(num);
+    }
+    
+    while (!q.isEmpty()){
+    
+        s.push(q.remove());
+    
+    }
+    
+    while (!s.isEmpty()){
+        q.add(s.pop());
+    }
+    while (!q.isEmpty()){
+        s.push(q.remove());
+    }
+}
+
+
+14.4: collapse
+
+public void collapse(Stack<Integer> s){
+
+    Queue<Integer> q = new LinkedList<Integer>();
+
+    if (s.size() % 2 != 0){
+        q.add(s.pop());
+    }
+    
+    while (!s.isEmpty()){
+        int a = s.pop();
+        int b = s.pop();
+        
+        q.add(a + b);
+    }
+    
+    while (!q.isEmpty()){
+        s.push(q.remove());
+    }
+    while (!s.isEmpty()){
+        q.add(s.pop());
+    }
+    while (!q.isEmpty()){
+        s.push(q.remove());
+    }
+
+
+}
