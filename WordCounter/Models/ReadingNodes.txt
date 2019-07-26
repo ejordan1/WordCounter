@@ -1,0 +1,10 @@
+Reading Nodes: 1:00 pm - 1:40
+
+Clean Code
+
+Naming: dont use redudant names. Never have table in the name of a table or array in the name of an array
+name should imply what the thing is. 
+method names should be verbs
+
+
+Practice Problems
