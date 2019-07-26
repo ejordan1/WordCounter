@@ -21,7 +21,8 @@ public class Program{
                 Console.WriteLine("You just pressed enter. You have to type in the word, then press enter! ffs!");
                 word = Console.ReadLine();
             }
-            Console.WriteLine(word + " appeared " + Counter.WordFrequency(word, sentence) + " in the sentence you inputted. Nicely done. That is better than 37% of users!");
+            Random rnd = new Random();
+            Console.WriteLine(word + " appeared " + Counter.WordFrequency(word, sentence) + " in the sentence you inputted. Nicely done. That is better than " + rnd.Next(1, 99) + "% of users! Niiiiiiice");
         
         } while(Program.PlayAgain());
         Console.WriteLine("Until next time, Dave");
