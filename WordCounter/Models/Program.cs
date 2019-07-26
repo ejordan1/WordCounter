@@ -11,24 +11,24 @@ public class Program{
             Console.WriteLine("Enter the sentence:");
             string sentence = Console.ReadLine();
             while(sentence == ""){
-                Console.WriteLine("You just pressed the enter key instead of typing in the sentence and then pressing the enter key. Type the sentence first, then press enter. Two steps. You can do this.");
+                Console.WriteLine("You were supposed to enter a sentence and instead you decided to just press enter");
                 sentence = Console.ReadLine();
             }
-            Console.WriteLine("Good. This is great so far.");
-            Console.WriteLine("Go ahead and enter the word and we will go from there: ");
+            Console.WriteLine("Good");
+            Console.WriteLine("Go ahead and enter the word");
             string word = Console.ReadLine();
             while(word == ""){
                 Console.WriteLine("You just pressed enter. You have to type in the word, then press enter! ffs!");
                 word = Console.ReadLine();
             }
             Random rnd = new Random();
-            Console.WriteLine(word + " appeared " + Counter.WordFrequency(word, sentence) + " in the sentence you inputted. Nicely done. That is better than " + rnd.Next(1, 99) + "% of users! Niiiiiiice");
+            Console.WriteLine(word + " appeared " + Counter.CountWordFrequency(word, sentence) + " in the sentence you inputted. Nicely done. That is better than " + rnd.Next(1, 99) + "% of users! Niiiiiiice");
         
-        } while(Program.PlayAgain());
+        } while(Program.AsksUserIfPlayAgain());
         Console.WriteLine("Until next time, Dave");
         }
 
-        public static bool PlayAgain(){
+        public static bool AsksUserIfPlayAgain(){
             Console.WriteLine("Would you like to enter another sentence?");
             string input = Console.ReadLine().ToLower();
             if (input == "n" || input == "no" || input == "nope" || input == "noo"){
