@@ -8,7 +8,7 @@ namespace WordCounter.Models
     {
         //takes in a word and a sentence, returns number of appearences of word in sentence
         public static int CountWordFrequency(string input, string sentence){
-            
+            input = input.ToLower();
             char[] ignoreChars = new char[]{'\''};
 
             int count = 0;
