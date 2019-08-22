@@ -11,7 +11,9 @@ _This program reads user input and outputs the number of times the given word is
 ### Specs
 | Spec | Input | Output |
 | -------------     | ------------- | ------------- |
-| **Returns number of appearences of provided word in provided sentence divided by spaces** | "hi","Hi my name is hi hi hi." | 4 | | **Returns number of appearences of provided word in provided sentence divided by punctuation** | "hi","Hi my name is hi.hi.hi." | 4 | | **Returns number of appearences of provided word in provided sentence divided by punctuation** | "hi","Hi my name is hi.hi.hi." | |
+| **Returns number of appearences of provided word in provided sentence divided by spaces** | "hi","Hi my name is hi hi hi." | 4 | | **Returns number of appearences of provided word in provided sentence divided by spaces** | "hi","Hi my name is hi hi hi." | 4 | | **Returns number of appearences of provided word in provided sentence divided by spaces** | "hi","Hi my name is hi hi hi." | 4 |
+| **Returns number of appearences of provided word in provided sentence divided by punctuation** | "hi","Hi my name is hi.hi.hi." | 4 | 
+| **Returns number of appearences of provided word in provided sentence divided by punctuation** | "hi","Hi my name is hi.hi.hi." | 
 
 ## Setup/Installation Requirements
 
